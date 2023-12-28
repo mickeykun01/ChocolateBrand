@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: rgb(2,0,36);
+    background: linear-gradient(162deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba(0,212,255,1) 100%);
+  }
+
+  h2 {
+    color: #f20b0b8c;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    text-decoration: underline;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+
+  h2:hover {
+    color: #0bcbe9;
+  }
+
+  .chocolate-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .chocolate-item {
+    border: 2px solid #a40d0d;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    background: #fff;
+    
+  }
+
+  .chocolate-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.2);
+  }
+
+  .selected {
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+    background-color: #e0f7fa;
+  }
+
+  .remove-button {
+      cursor: pointer;
+      background-color: #ef5350;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 7px;
+      margin-bottom: 40px;
+      font-size: 10px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .remove-button:hover {
+      background-color: #d32f2f;
+    }
+
+  .custom-pack {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .selected-chocolates {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .selected-chocolate-item {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #a5d6a7;
+    border-radius: 3px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .selected-chocolate-item img {
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  .total-price {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+  }
+
+  #checkoutMessage {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    color: #740d0d;
+    opacity: 0; 
+    animation: fadeIn 0.8s ease-out forwards; 
+  }
+
+  /* #checkoutMessage::after {
+    content: '\1F389'; 
+    font-size: 20px;
+    margin-left: 5px;
+  } */
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .chocolate-item {
+      width: calc(50% - 20px); /* Two items per row */
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .chocolate-item {
+      width: 100%; /* One item per row */
+    }
+
+    .remove-button {
+      margin-left: 0;
+    }
+  }
